@@ -1,0 +1,151 @@
+Error: 1st coder: 0, 2nd coder: 1
+=================================
+
+1. Diff:
+https://www.pv-magazine-australia.com/2021/06/14/morrison-blowing-in-the-wind-sheltering-in-hydrogen-ambitions-at-the-g7-summit-in-cornwall/ https://www.pv-magazine-australia.com/2021/06/15/arena-launches-43-million-program-for-industrial-abatement-studies-as-concern-around-mandate-change-grows/
+[2 common NE]
+
+Both articles are about climate change and emissions-reducing technologies for Australia, however they describe different sub-stories: One is about the G7 Summit in Cornwall and the other is about a project launch of a $43 million program aimed at identifying how to reduce emissions in industry. Since we have defined news chains in an event-oriented manner, we would classify this article pair as unrelated.
+Error: Coder 2
+
+---------------------------------------------------------------------------------------------------
+
+2. Diff:
+https://www.pv-magazine-australia.com/2021/06/09/plans-for-3-gw-renewable-hydrogen-production-facility-progress-with-land-secured-in-queensland-in-government-japan-partnership/,
+https://www.nsenergybusiness.com/news/asian-renewable-energy-hub-environmental-ministry-rejected/
+[0 common NE]
+
+3. Diff:
+https://www.pv-magazine-australia.com/2021/06/09/plans-for-3-gw-renewable-hydrogen-production-facility-progress-with-land-secured-in-queensland-in-government-japan-partnership/
+https://www.pv-magazine-australia.com/2021/06/21/nationally-sanctioned-23-gw-hydrogen-ammonia-project-gets-tangled-in-the-wetlands/
+[0 common NE]
+
+4. Diff:
+https://www.pv-magazine-australia.com/2021/06/09/plans-for-3-gw-renewable-hydrogen-production-facility-progress-with-land-secured-in-queensland-in-government-japan-partnership/
+https://www.pv-magazine.com/2021/06/21/australias-23-gw-hydrogen-ammonia-project-facing-environmental-issues/
+[0 common NE]
+
+2-4. Diff:
+Article 1 talks about Plans for a renewable hydrogen production facility in Australia.
+Article 2 talks about the Australian project Asian Renewable Energy Hub (AREH) which was rejected due to environmental concerns.
+The articles are therefore not related.
+Error: Coder 2
+
+
+Error: 1st coder: 1, 2nd coder: 0
+[>= 1 common NE]
+=================================
+
+5. Diff:
+https://www.pv-magazine.com/2021/06/24/first-reactions-to-bidens-us-ban-on-solar-imports-from-chinas-xinjiang-province/
+https://pv-magazine-usa.com/2021/06/24/biden-administration-targets-four-chinese-companies-with-import-bans-over-forced-labor-allegations/
+
+6. Diff:
+https://pv-magazine-usa.com/2021/06/22/seia-has-a-strong-sense-that-u-s-solar-supply-chains-are-shifting-but-hard-numbers-are-scarce/
+https://pv-magazine-usa.com/2021/06/24/biden-administration-targets-four-chinese-companies-with-import-bans-over-forced-labor-allegations/  
+
+7. Diff:
+https://pv-magazine-usa.com/2021/06/22/seia-has-a-strong-sense-that-u-s-solar-supply-chains-are-shifting-but-hard-numbers-are-scarce/
+https://www.pv-magazine.com/2021/06/24/first-reactions-to-bidens-us-ban-on-solar-imports-from-chinas-xinjiang-province/
+
+8. Diff:
+https://www.reuters.com/article/us-usa-china-trade/u-s-says-ban-on-chinese-firms-solar-products-will-not-slow-clean-energy-progress-idUSKCN2E01AB
+https://www.pv-magazine.com/2021/06/24/first-reactions-to-bidens-us-ban-on-solar-imports-from-chinas-xinjiang-province/
+
+9. Diff:
+https://www.reuters.com/article/us-usa-china-trade/u-s-says-ban-on-chinese-firms-solar-products-will-not-slow-clean-energy-progress-idUSKCN2E01AB
+https://pv-magazine-usa.com/2021/06/22/seia-has-a-strong-sense-that-u-s-solar-supply-chains-are-shifting-but-hard-numbers-are-scarce/
+
+10. Diff:
+https://www.reuters.com/article/us-usa-china-commerce/u-s-bans-imports-of-solar-panel-material-from-chinese-company-idUSKCN2DZ2LT
+https://www.pv-magazine.com/2021/06/24/first-reactions-to-bidens-us-ban-on-solar-imports-from-chinas-xinjiang-province/
+
+11. Diff:
+https://www.pv-magazine.com/2021/06/24/first-reactions-to-bidens-us-ban-on-solar-imports-from-chinas-xinjiang-province/
+https://pv-magazine-usa.com/2021/06/14/sunrise-brief-congress-urges-border-patrol-action-on-forced-labor-allegations/
+
+12. Diff:
+https://pv-magazine-usa.com/2021/06/24/biden-administration-targets-four-chinese-companies-with-import-bans-over-forced-labor-allegations/ https://pv-magazine-usa.com/2021/06/14/sunrise-brief-congress-urges-border-patrol-action-on-forced-labor-allegations/
+
+13. Diff:
+https://www.reuters.com/article/us-usa-china-commerce/u-s-bans-imports-of-solar-panel-material-from-chinese-company-idUSKCN2DZ2LT https://pv-magazine-usa.com/2021/06/22/seia-has-a-strong-sense-that-u-s-solar-supply-chains-are-shifting-but-hard-numbers-are-scarce/
+
+14. Diff:
+https://pv-magazine-usa.com/2021/06/22/seia-has-a-strong-sense-that-u-s-solar-supply-chains-are-shifting-but-hard-numbers-are-scarce/ https://pv-magazine-usa.com/2021/06/14/sunrise-brief-congress-urges-border-patrol-action-on-forced-labor-allegations/
+
+15. Diff:
+https://www.reuters.com/article/us-usa-china-commerce/u-s-bans-imports-of-solar-panel-material-from-chinese-company-idUSKCN2DZ2LT
+https://pv-magazine-usa.com/2021/06/14/sunrise-brief-congress-urges-border-patrol-action-on-forced-labor-allegations/
+
+16. Diff:
+https://www.reuters.com/article/us-usa-china-trade/u-s-says-ban-on-chinese-firms-solar-products-will-not-slow-clean-energy-progress-idUSKCN2E01AB
+https://pv-magazine-usa.com/2021/06/14/sunrise-brief-congress-urges-border-patrol-action-on-forced-labor-allegations/
+
+Diff 5-16: Both articles deal with the topic of Biden’s US ban on solar imports from China’s Xinjiang province due to labor allegations.
+Error: Coder 2
+
+---------------------------------------------------------------------------------------------------
+
+17. Diff:
+https://www.pv-magazine-australia.com/2021/06/24/rapid-rejection-of-50-billion-renewable-energy-hub-raises-concerns/ https://www.pv-magazine-australia.com/2021/06/21/nationally-sanctioned-23-gw-hydrogen-ammonia-project-gets-tangled-in-the-wetlands/
+
+18. Diff:
+https://www.pv-magazine-australia.com/2021/06/24/rapid-rejection-of-50-billion-renewable-energy-hub-raises-concerns/
+https://www.pv-magazine.com/2021/06/21/australias-23-gw-hydrogen-ammonia-project-facing-environmental-issues/
+
+19. Diff:
+https://www.pv-magazine-australia.com/2021/06/24/rapid-rejection-of-50-billion-renewable-energy-hub-raises-concerns/ https://www.nsenergybusiness.com/news/asian-renewable-energy-hub-environmental-ministry-rejected/
+
+Diff. 17-19: Both articles deal with the Australian project Asian Renewable Energy Hub (AREH) which was rejected due to environmental concerns.
+Error: Coder 2
+
+---------------------------------------------------------------------------------------------------
+
+20. Diff:
+https://www.pv-magazine.com/2021/06/21/australias-23-gw-hydrogen-ammonia-project-facing-environmental-issues/
+https://www.pv-magazine.com/2021/06/22/the-hydrogen-stream-off-grid-hydrogen-power-solution-based-on-alkaline-fuel-cell-from-israel-first-green-hydrogen-production-in-russia/
+
+21. Diff:
+https://www.pv-magazine-australia.com/2021/06/21/nationally-sanctioned-23-gw-hydrogen-ammonia-project-gets-tangled-in-the-wetlands/
+https://www.pv-magazine.com/2021/06/22/the-hydrogen-stream-off-grid-hydrogen-power-solution-based-on-alkaline-fuel-cell-from-israel-first-green-hydrogen-production-in-russia/
+
+22. Diff:
+https://www.pv-magazine-australia.com/2021/06/24/rapid-rejection-of-50-billion-renewable-energy-hub-raises-concerns/ https://www.pv-magazine.com/2021/06/22/the-hydrogen-stream-off-grid-hydrogen-power-solution-based-on-alkaline-fuel-cell-from-israel-first-green-hydrogen-production-in-russia/
+
+23. Diff:
+https://www.nsenergybusiness.com/news/australia-asian-renewable-energy-hub/
+https://www.pv-magazine.com/2021/06/22/the-hydrogen-stream-off-grid-hydrogen-power-solution-based-on-alkaline-fuel-cell-from-israel-first-green-hydrogen-production-in-russia/
+
+Diff. 20-23: Article two is an overview article which deals with multiple topics such as the rejection of the Australian project Asian Renewable Energy Hub.
+Therefore both articles are related.
+Error: Coder 2
+
+---------------------------------------------------------------------------------------------------
+
+24. Diff:
+https://www.pv-magazine-australia.com/2021/06/15/arena-launches-43-million-program-for-industrial-abatement-studies-as-concern-around-mandate-change-grows/
+https://www.pv-magazine-australia.com/2021/06/18/taylors-plans-for-arena-under-scrutiny-in-senate/
+
+25. Diff:
+https://www.pv-magazine-australia.com/2021/06/15/arena-launches-43-million-program-for-industrial-abatement-studies-as-concern-around-mandate-change-grows/
+https://www.pv-magazine-australia.com/2021/06/23/senate-blocks-taylors-attempt-to-illegally-siphon-renewables-funding/
+
+Both articles deal with concerns about proposed changes to the funding mandate of the Australian Renewable Energy Agency (ARENA) as the  Government wants to include funding for controversial fossil fuel projects.
+Error: Coder 2
+
+---------------------------------------------------------------------------------------------------
+
+26. Diff:
+https://renews.biz/70090/sse-unveils-arklow-bank-2-om-base-proposals/
+https://www.nsenergybusiness.com/news/plans-for-operations-and-maintenance-facility-at-arklow-harbour-unveiled/
+
+Both articles deals with plans for an operations and maintenance facility at Arklow Harbour.
+Error: Coder 2
+
+---------------------------------------------------------------------------------------------------
+
+27. Diff:
+https://www.pv-magazine-australia.com/2021/06/09/plans-for-3-gw-renewable-hydrogen-production-facility-progress-with-land-secured-in-queensland-in-government-japan-partnership/ https://www.pv-magazine-australia.com/2021/06/14/morrison-blowing-in-the-wind-sheltering-in-hydrogen-ambitions-at-the-g7-summit-in-cornwall/
+
+Both articles deal with the topic of Alliances of the Australian government with Germany and Japan to develop emissions-reducing technologies.
+Error: Coder 2
