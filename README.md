@@ -16,6 +16,7 @@ This repository contains code and data underlying the paper.
 * Directory `hand_coded` contains the hand-codings of both coders and the file `diff_coder1_coder2.txt` which contains a description of the errors for each article pair.
 * File `gedikli-business_energy_news_dataset-2021-06-29-article_texts.csv` contains the extracted texts and the named entities of the 100 news articles from the Business Energy News dataset.
 * File `gedikli-business_energy_news_dataset-2021-06-29.[csv|xlsx]` contains our new dataset of Business Energy News which was created with the help of our method.
+* File `nicholls_and_bright_dataset_with_ner.csv` contains the news articles of Nicholls & Bright's dataset annotated with named entities. Due to copyrights, we have not included the article texts. You can download the article texts from http://dx.doi.org/10.5287/bodleian:R5qdeJxYA.
 
 ### Python Code
 
