@@ -21,7 +21,7 @@ This repository contains code and data underlying the paper.
 ### Python Code
 
 * File `dataset_generator.py` contains our main article selection procedure.
-* File `inter_rater_reliability.py` contains a script for computing the inter-rater reliability between both coders by computing the Krippendorff’s alpha score.
+* File `inter_rater_reliability.py` contains a script for estimating the inter-rater reliability between both coders by computing the Krippendorff’s alpha score.
 * File `nicholls_and_bright_dataset_analysis.py` contains a script for annotating the dataset of Nicholls & Bright with named entities and for computing the common named entities of related articles. The script identifies all related tuples with no common entities.
 * File `text_utils.py` contains auxiliary methods.
 
