@@ -11,10 +11,19 @@ This repository contains code and data underlying the paper.
 
 ## Content
 
+### Data
+
 * Directory `hand_coded` contains the hand-codings of both coders and the file `diff_coder1_coder2.txt` which contains a description of the errors for each article pair.
-* `dataset_generator.py` contains our main article selection procedure.
-* `inter_rater_reliability.py` contains a script for computing the inter-rater reliability between both coders by computing the Krippendorff’s alpha score.
-* `nicholls_and_bright_dataset_analysis.py` contains a script for annotating the dataset of Nicholls & Bright with named entities and for computing the common named entities of related articles. The script identifies all related tuples with no common entities.
-* `text_utils.py` contains auxiliary methods.
-* `gedikli-business_energy_news_dataset-2021-06-29-article_texts.csv` contains the extracted texts and the named entities of the 100 news articles from the Business Energy News dataset.
-* `gedikli-business_energy_news_dataset-2021-06-29.[csv|xlsx]` contains our new dataset of Business Energy News which was created with the help of our method.
+* File `gedikli-business_energy_news_dataset-2021-06-29-article_texts.csv` contains the extracted texts and the named entities of the 100 news articles from the Business Energy News dataset.
+* File `gedikli-business_energy_news_dataset-2021-06-29.[csv|xlsx]` contains our new dataset of Business Energy News which was created with the help of our method.
+
+### Python Code
+
+* File `dataset_generator.py` contains our main article selection procedure.
+* File `inter_rater_reliability.py` contains a script for computing the inter-rater reliability between both coders by computing the Krippendorff’s alpha score.
+* File `nicholls_and_bright_dataset_analysis.py` contains a script for annotating the dataset of Nicholls & Bright with named entities and for computing the common named entities of related articles. The script identifies all related tuples with no common entities.
+* File `text_utils.py` contains auxiliary methods.
+
+### Misc
+
+* File `package_list.txt` is a snapshot of our current python environment with all installed packages and their versions.
