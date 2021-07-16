@@ -9,6 +9,10 @@ This repository contains code and data underlying the paper.
 3. `conda install pytorch cudatoolkit=10.2 -c pytorch`
 4. `pip install krippendorff pymongo[srv] PyStemmer simpletransformers`
 
+## License
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
+
 ## Content
 
 ### Data
