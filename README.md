@@ -1,4 +1,4 @@
-# Replication materials for the paper "Automated Identification of News Story Chains: A New Dataset and Entity-based Labeling Method" by Gedikli, Stockem-Novo, and Jannach
+# Replication materials for the paper "Automated Identification of News Story Chains: A New Dataset and Entity-based Labeling Method" by Gedikli, Stockem Novo, and Jannach
 
 This repository contains code and data underlying the paper.
 
