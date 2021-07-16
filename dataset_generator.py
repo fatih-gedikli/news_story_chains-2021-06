@@ -8,13 +8,21 @@
 import csv
 import pandas as pd
 import pickle
+import pymongo
 import random
 
-from mongo_client import news_collection
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
-output_dir = './machine_learning/story_chain_detection/'
+mongo_username = 'USERNAME'
+mongo_password = 'PASSWORD'
+
+mongo_client = pymongo.MongoClient('mongodb+srv://{}:{}@...'.format(mongo_username, mongo_password))
+mongo_client_test = mongo_client.test
+database = mongo_client['api_dev']
+news_collection = database['news']
+
+output_dir = './story_chain_detection/'
 random_seed = 1453
 
 

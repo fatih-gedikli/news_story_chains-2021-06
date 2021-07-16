@@ -2,15 +2,16 @@ import csv
 import numpy as np
 import pandas as pd
 
-from machine_learning.data.text_utils import clean_org, clean_per, clean_loc
-from machine_learning.ner.news_ner import NewsNER
 from nltk.tokenize import sent_tokenize
+from simpletransformers.ner import NERModel
+from text_utils import clean_org, clean_per, clean_loc
 from urllib.parse import urljoin
 
-input_dir = './machine_learning/data/input/story_chain_detection/nicholls_and_bright/'
+input_dir = './input/nicholls_and_bright/'
 file_list = ['bbc-out.csv', 'express-out.csv', 'guardian-out.csv', 'mail-out.csv', 'mirror-out.csv']
 validation_dataset = 'story_pairs_validation_august.csv'
-output_dir = './machine_learning/story_chain_detection/'
+output_dir = './story_chain_detection/'
+path_to_ner_model = './machine_learning/ner/models/best_model'
 
 def section_tokenize(news_article, max_seq_length=512):
     ret = []
@@ -88,8 +89,7 @@ def annotate_dataset():
 
     predictions = []
     if model_input:
-        model = NewsNER()
-        model.load('roberta', './machine_learning/ner/models/best_model')
+        model = NERModel('roberta', path_to_ner_model)
 
         predictions, raw_outputs = model.predict(flat_model_input)
         assert len(predictions) == len(flat_model_input)
