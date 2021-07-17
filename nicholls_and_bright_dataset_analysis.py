@@ -63,8 +63,9 @@ def get_entities(prediction, beginning_tag='B-ORG', inside_tag='I-ORG'):
 def annotate_dataset():
     val_df = pd.read_csv(urljoin(input_dir, validation_dataset), sep=';', names=['Link1', 'Link2', 'Relation'], encoding='utf-8')
     #print(val_df)
-    val_unique_links = val_df.Link1.unique()
-    print(len(val_unique_links), 'unique links in validation dataset') # 253 unique links in validation dataset
+    column_values = val_df[['Link1', 'Link2']].values.ravel()
+    val_unique_links =  pd.unique(column_values)
+    print(len(val_unique_links), 'unique links in validation dataset') # 254 unique links in validation dataset
 
     combined_df = pd.concat([pd.read_csv(urljoin(input_dir, fname), sep=',', names=['url', 'paperurl', 'title', 'date', 'text'], encoding='utf-8') for fname in file_list], ignore_index=True)
     # Filter articles which are not in validation dataset
