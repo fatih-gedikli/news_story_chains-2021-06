@@ -7,6 +7,8 @@ from simpletransformers.ner import NERModel
 from text_utils import clean_org, clean_per, clean_loc
 from urllib.parse import urljoin
 
+hand_coded_dir = './hand_coded/'
+file_coder2 = 'story_pairs-2021-06-29-coder2-unaware_student.csv'
 input_dir = './input/nicholls_and_bright/'
 file_list = ['bbc-out.csv', 'express-out.csv', 'guardian-out.csv', 'mail-out.csv', 'mirror-out.csv']
 validation_dataset = 'story_pairs_validation_august.csv'
@@ -146,9 +148,35 @@ def check_common_ne_of_related_articles():
             print('title1: {}'.format(row['title1']))
             print('title2: {}'.format(row['title2']))
 
+def compute_accuracy_of_auto_labeling_procedure():
+    df = pd.read_csv('gedikli-business_energy_news_dataset-2021-06-29.csv', sep=';', encoding='utf-8')
+    df = df.loc[df['num_common_ne'] == 0]
+    print('Number of article pairs with no common named entitis that were automatically considered as unrelated:', len(df))
+
+    coder2_df = pd.read_csv(urljoin(hand_coded_dir, file_coder2), sep=';', names=['Link1', 'Link2', 'Relation'], encoding='utf-8')
+    print('Compute diffs')
+    count_diffs = 0
+    for i, row in df.iterrows():
+        url1 = row['url1']
+        url2 = row['url2']
+        article_pair_coder2 = coder2_df.loc[((coder2_df['Link1'] == url1) & (coder2_df['Link2'] == url2)) | ((coder2_df['Link2'] == url1) & (coder2_df['Link1'] == url2))]
+        assert len(article_pair_coder2) == 1
+        if article_pair_coder2.iloc[0]['Relation'] != 0:
+            count_diffs += 1
+            print('-'*50)
+            print('url1:', url1)
+            print('url2:', url2)
+            print('title1: {}'.format(row['title1']))
+            print('title2: {}'.format(row['title2']))
+    
+    print('='*50)
+    print('Number of diffs:', count_diffs)
+    print('Precision:', (len(df)-count_diffs) / len(df))
+
 def main():
     #annotate_dataset()
-    check_common_ne_of_related_articles()
+    #check_common_ne_of_related_articles()
+    compute_accuracy_of_auto_labeling_procedure()
 
 if __name__ == '__main__':
     main()
