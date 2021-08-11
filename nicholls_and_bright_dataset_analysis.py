@@ -1,11 +1,11 @@
 import csv
 import numpy as np
+import os
 import pandas as pd
 
 from nltk.tokenize import sent_tokenize
 from simpletransformers.ner import NERModel
 from text_utils import clean_org, clean_per, clean_loc
-from urllib.parse import urljoin
 
 hand_coded_dir = './hand_coded/'
 file_coder2 = 'story_pairs-2021-06-29-coder2-unaware_student.csv'
@@ -63,13 +63,13 @@ def get_entities(prediction, beginning_tag='B-ORG', inside_tag='I-ORG'):
     return ';'.join(entities)
 
 def annotate_dataset():
-    val_df = pd.read_csv(urljoin(input_dir, validation_dataset), sep=';', names=['Link1', 'Link2', 'Relation'], encoding='utf-8')
+    val_df = pd.read_csv(os.path.join(input_dir, validation_dataset), sep=';', names=['Link1', 'Link2', 'Relation'], encoding='utf-8')
     #print(val_df)
     column_values = val_df[['Link1', 'Link2']].values.ravel()
     val_unique_links =  pd.unique(column_values)
     print(len(val_unique_links), 'unique links in validation dataset') # 254 unique links in validation dataset
 
-    combined_df = pd.concat([pd.read_csv(urljoin(input_dir, fname), sep=',', names=['url', 'paperurl', 'title', 'date', 'text'], encoding='utf-8') for fname in file_list], ignore_index=True)
+    combined_df = pd.concat([pd.read_csv(os.path.join(input_dir, fname), sep=',', names=['url', 'paperurl', 'title', 'date', 'text'], encoding='utf-8') for fname in file_list], ignore_index=True)
     # Filter articles which are not in validation dataset
     articles = []
     for index, article in combined_df.iterrows():
@@ -121,14 +121,14 @@ def annotate_dataset():
     val_text_df['loc'] = val_text_df['loc'].apply(lambda x: clean_loc(x))
 
     print(val_text_df)
-    val_text_df.to_csv(urljoin(output_dir, 'nicholls_and_bright_dataset_with_ner.csv'), sep=',', quoting=csv.QUOTE_ALL, quotechar='"', encoding='utf-8', header=True, index=False)
+    val_text_df.to_csv(os.path.join(output_dir, 'nicholls_and_bright_dataset_with_ner.csv'), sep=',', quoting=csv.QUOTE_ALL, quotechar='"', encoding='utf-8', header=True, index=False)
 
 def check_common_ne_of_related_articles():
-    val_df = pd.read_csv(urljoin(input_dir, validation_dataset), sep=';', names=['Link1', 'Link2', 'Relation'], encoding='utf-8')
+    val_df = pd.read_csv(os.path.join(input_dir, validation_dataset), sep=';', names=['Link1', 'Link2', 'Relation'], encoding='utf-8')
     val_df = val_df.loc[val_df['Relation'] == 'Related']
     print(val_df)
 
-    val_ner_df = pd.read_csv(urljoin(output_dir, 'story_chain.csv'), sep=',', quoting=csv.QUOTE_ALL, quotechar='"', encoding='utf-8')
+    val_ner_df = pd.read_csv(os.path.join(output_dir, 'story_chain.csv'), sep=',', quoting=csv.QUOTE_ALL, quotechar='"', encoding='utf-8')
 
     ret_df = pd.DataFrame()
     for i, row in val_df.iterrows():
@@ -153,7 +153,7 @@ def compute_accuracy_of_auto_labeling_procedure():
     df = df.loc[df['num_common_ne'] == 0]
     print('Number of article pairs with no common named entitis that were automatically considered as unrelated:', len(df))
 
-    coder2_df = pd.read_csv(urljoin(hand_coded_dir, file_coder2), sep=';', names=['Link1', 'Link2', 'Relation'], encoding='utf-8')
+    coder2_df = pd.read_csv(os.path.join(hand_coded_dir, file_coder2), sep=';', names=['Link1', 'Link2', 'Relation'], encoding='utf-8')
     print('Compute diffs')
     count_diffs = 0
     for i, row in df.iterrows():

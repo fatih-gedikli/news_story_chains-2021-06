@@ -6,13 +6,14 @@
 #    2.2 Append articles from cluster to dataset
 
 import csv
+import os
 import pandas as pd
 import pickle
 import pymongo
 import random
 
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urlparse
 
 mongo_username = 'USERNAME'
 mongo_password = 'PASSWORD'
@@ -28,7 +29,7 @@ random_seed = 1453
 
 class NESM():
     def __init__(self):
-        fname = urljoin(output_dir, 'sim.pickle')
+        fname = os.path.join(output_dir, 'sim.pickle')
         if Path(fname).is_file():
             # Load scores (number of common entities between two documents) and
             # maximum number of common entities per category from cache.
@@ -155,7 +156,7 @@ def cluster_articles(sim, sim_score_cutoff):
     Returns:
     List of article clusters ([ [a11, a12, ...], [a21, a22, ...], ... ])
     """
-    fname = urljoin(output_dir, 'cluster.pickle')
+    fname = os.path.join(output_dir, 'cluster.pickle')
     if Path(fname).is_file():
             # Load clusters from cache.
             clusters = pickle.load(open(fname, 'rb'))
@@ -280,7 +281,7 @@ def write_dataset_to_file(articles):
     print(df)
 
     df.sort_values(['url1', 'num_common_ne'], ascending = (True, False))
-    df.to_csv(urljoin(output_dir, 'story_chain.csv'), sep=',', quoting=csv.QUOTE_ALL, quotechar='"', encoding='utf-8', header=True, index=False)
+    df.to_csv(os.path.join(output_dir, 'story_chain.csv'), sep=',', quoting=csv.QUOTE_ALL, quotechar='"', encoding='utf-8', header=True, index=False)
 
 def remove_blacklist_ne(named_entities, sep=';', blacklist=[]):
     if pd.isna(named_entities):
@@ -304,7 +305,7 @@ def remove_blacklist_ne(named_entities, sep=';', blacklist=[]):
 def main():
     verbose = False
     cluster_articles_for_selection = False
-    fname = urljoin(output_dir, 'nicholls_and_bright_dataset_with_ner.csv')
+    fname = os.path.join(output_dir, 'nicholls_and_bright_dataset_with_ner.csv')
     df = pd.DataFrame()
     if Path(fname).is_file():
         df = pd.read_csv(fname, sep=',', quoting=csv.QUOTE_ALL, quotechar='"', encoding='utf-8')
@@ -351,7 +352,7 @@ def main():
             articles.append(a)
 
     articles_df = pd.DataFrame(articles)
-    articles_df.to_csv(urljoin(output_dir, 'story_chain_news_articles.csv'), sep=',', quoting=csv.QUOTE_ALL, quotechar='"', encoding='utf-8', header=True, index=False)
+    articles_df.to_csv(os.path.join(output_dir, 'story_chain_news_articles.csv'), sep=',', quoting=csv.QUOTE_ALL, quotechar='"', encoding='utf-8', header=True, index=False)
     write_dataset_to_file(articles)
 
 if __name__ == '__main__':
