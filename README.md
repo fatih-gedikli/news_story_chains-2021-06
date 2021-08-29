@@ -6,12 +6,11 @@ This repository contains code and data underlying the paper.
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
 
-## Setup
+## Citation
 
-1. `conda create -n nsc python=3.8.5`
-2. `conda install nltk numpy pandas`
-3. `conda install pytorch cudatoolkit=10.2 -c pytorch`
-4. `pip install krippendorff pymongo[srv] PyStemmer simpletransformers`
+To acknowledge use of the dataset in publications, please cite the following paper, which will be published soon:
+
+> Fatih Gedikli, Anne Stockem Novo, Dietmar Jannach: *Semi-Automated Identification of News Story Chains: A New Dataset and Entity-based Labeling Method*. Proceedings of the 9th International Workshop on News Recommendation and Analytics (INRA 2021) in conjunction with 15th ACM Conference on Recommender Systems (RecSys 2021), 2021.
 
 ## Content
 
@@ -32,3 +31,10 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 In
 ### Misc
 
 * File `package_list.txt` is a snapshot of our current python environment with all installed packages and their versions.
+
+## Setup
+
+1. `conda create -n nsc python=3.8.5`
+2. `conda install nltk numpy pandas`
+3. `conda install pytorch cudatoolkit=10.2 -c pytorch`
+4. `pip install krippendorff pymongo[srv] PyStemmer simpletransformers`
