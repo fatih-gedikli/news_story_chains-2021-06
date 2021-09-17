@@ -10,7 +10,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 In
 
 To acknowledge use of the dataset in publications, please cite the following paper, which will be published soon:
 
-> Fatih Gedikli, Anne Stockem Novo, Dietmar Jannach: *Semi-Automated Identification of News Story Chains: A New Dataset and Entity-based Labeling Method*. Proceedings of the 9th International Workshop on News Recommendation and Analytics (INRA 2021) in conjunction with 15th ACM Conference on Recommender Systems (RecSys 2021), 2021.
+> Fatih Gedikli, Anne Stockem Novo, Dietmar Jannach: *Semi-Automated Identification of News Story Chains: A New Dataset and Entity-based Labeling Method*. Proceedings of the 9th International Workshop on News Recommendation and Analytics (INRA 2021) in conjunction with 15th ACM Conference on Recommender Systems (RecSys 2021), September 25, 2021, Amsterdam, Netherlands.
 
 ## Content
 
